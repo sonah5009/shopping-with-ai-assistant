@@ -11,6 +11,7 @@ print(pd.isna(df).sum(), '\n')
 
 df = df.dropna()
 df.drop_duplicates(inplace=True)
+df.drop_duplicates(subset='Description',inplace=True)
 
 # Rename Description to Name
 df.rename(columns={'Description':'Name'}, inplace=True)
